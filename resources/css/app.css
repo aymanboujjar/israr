@@ -2,20 +2,24 @@
 
 @plugin 'tailwindcss-animate';
 
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../../public/assets/fonts/Montserrat-Regular.ttf'),
+}
+
 @source '../views';
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
 
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-    --font-sans:
-        'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-sans: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
 
 
-
-    --color-alpha: #fee819;
-    --color-beta: #212529;
-    --color-error: #ff7376;
+    --color-alpha: #4d0458;
+    --color-beta: #cd6cff;
+    --color-light: #ffffff;
+    --color-error: #f72b2b;
     --color-good: #51b04f;
     --color-light_gray: #f2f2f2;
     --color-skeleton1: #cacaca;
@@ -146,6 +150,6 @@
     }
 
     body {
-        @apply bg-background text-foreground;
+        @apply bg-background text-foreground font-sans;
     }
 }
