@@ -25,7 +25,7 @@ const mainNavItems: NavItem[] = [
         icon: LayoutGrid,
     },
     {
-        title: <TransText ar="الرئيسية" fr="Accueil" en="Home" />,
+        title: <TransText ar="برامجنا" fr="programmes" en="programmes" />,
         href: '/programmes',
         icon: null,
     },
@@ -98,7 +98,7 @@ export function AppHeader({ breadcrumbs = [] }: AppHeaderProps) {
 
                     {/* Desktop Navigation */}
                     <div className="ml-6 hidden h-full items-center space-x-6 lg:flex">
-                        <NavigationMenu className="flex h-full items-stretch">
+                        <NavigationMenu className="flex h-full items-stretch"  dir={isArabic ? 'rtl' : 'ltr'}>
                             <NavigationMenuList className="flex h-full items-stretch space-x-2">
                                 {mainNavItems.map((item, index) => (
                                     <NavigationMenuItem key={index} className="relative flex h-full items-center">
